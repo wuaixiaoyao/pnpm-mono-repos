@@ -1,0 +1,27 @@
+{
+  "name": "pnpm-mono-repos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev:demo": "pnpm -F demo dev",
+    "build": "pnpm --filter=@wuaixiaoyao-lib/* run build",
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "wuaixiaoyao",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.24.3",
+    "father-build": "^1.22.3",
+    "rollup": "^2.78.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
