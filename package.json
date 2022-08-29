@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "husky install",
     "dev:demo": "pnpm -F demo dev",
-    "build": "pnpm --filter=@wuaixiaoyao-lib/* run build",
+    "build": "pnpm --filter=@wuaixiaoyao-monorepo-lib/* run build",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version",
+    "release": "pnpm build && pnpm release:only",
+    "release:only": "changeset publish",
+    "commit": "cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
@@ -18,10 +22,16 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.24.3",
+    "@commitlint/cli": "^17.1.1",
+    "@commitlint/config-conventional": "^17.1.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "father-build": "^1.22.3",
+    "husky": "^8.0.1",
     "rollup": "^2.78.0"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "ts-node": "^10.9.1"
   }
 }

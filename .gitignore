@@ -6,4 +6,4 @@ lib
 /node_modules
 /packages/*/lib
 /packages/*/dist
-/packages/*/node_modules
+/packages/**/node_modules

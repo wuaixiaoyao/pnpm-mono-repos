@@ -1,5 +1,5 @@
 // pkg1/src/index.ts
-import pkg2 from "@wuaixiaoyao-lib/monorepo2";
+import pkg2 from "@wuaixiaoyao-monorepo-lib/monorepo2";
 
 function fun2() {
   pkg2();

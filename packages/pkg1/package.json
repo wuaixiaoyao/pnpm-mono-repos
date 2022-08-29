@@ -1,5 +1,5 @@
 {
-  "name": "@wuaixiaoyao-lib/monorepo1",
+  "name": "@wuaixiaoyao-monorepo-lib/monorepo1",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "@wuaixiaoyao-lib/monorepo2": "1.0.0"
+    "@wuaixiaoyao-monorepo-lib/monorepo2": "1.0.0"
   },
   "peerDependencies": {
     "webpack": "^5.74.0"
